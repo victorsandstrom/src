@@ -15,6 +15,8 @@ public class Node {
 	LinkedList messageQueue = new LinkedList(); 
 	
 	public Node(){
+		//Check own position
+		//Check Neighbours
 		
 	}
 	
