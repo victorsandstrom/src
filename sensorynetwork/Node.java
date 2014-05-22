@@ -14,7 +14,9 @@ public class Node {
 	Request activeMessage = new Request();
 	LinkedList messageQueue = new LinkedList(); 
 	
-	
+	public Node(){
+		
+	}
 	
 	/* Funktion: Move()
 	 * 1. Meddelande tas emot, meddelande sätts in i activeMessage 
