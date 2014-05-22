@@ -1,5 +1,6 @@
 package sensorynetwork;
 
-public class testnanting {
+
+public class Node {
 
 }
