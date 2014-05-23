@@ -7,9 +7,11 @@ public class Node {
 	/*
 	 * Två attribut för att hantera meddelanden under varje timeTick
 	 * TODO Skapa en klass "Request" för att representera meddelanden
+	 * activeMessage används av move och sendMessage för att besluta
+	 * om ett meddelande kan skickas vidare under ett timeTick
 	 */
 	
-	private Request activeMessage = new Request();
+	private boolean activeMessage;
 	private LinkedList messageQueue = new LinkedList();
 	private Position pos;
 	/*
@@ -26,7 +28,7 @@ public class Node {
 		pos.x = x;
 		pos.y = y;	
 		//Check Neighbors
-		neighbours = checkNeighbors();
+		neighbors = CheckNeighbors();
 		
 	}
 	
@@ -36,19 +38,21 @@ public class Node {
 	 * så skickas det aktiva meddelandet vidare
 	 */
 	private void Move(){
-		
+		/*
+		 * TODO check if activeMessage is true. If it is set it to false. If it isnt
+		 * then check messageQueue, if there is a message there 
+		 */
 	}
 	
 	/*
 	 * Funktion: CheckNeighbors
 	 * Retur: Returnerar en hashtabell med de grannar som omger noden i fråga
 	 */
-	private void CheckNeighbors(){
+	private Hashtable CheckNeighbors(){
 		/* Hashtable where the keys are the directions by compass notation from node 
 		 * and value is position of node. 
-		 */
-		
-		Hashtable table = new Hashtable();
+		 */		
+		Hashtable neighbors = new Hashtable();
 		Position temp = new Position();
 		
 		/*
@@ -60,6 +64,7 @@ public class Node {
 		table.put("north", temp);
 		table.put("northE", temp);
 		//etc... 
+		return this.neighbors;
 	}
 
 }
