@@ -9,4 +9,5 @@ public class sensorNode extends Node{
 	public void move(){
 		
 	}
+	
 }
